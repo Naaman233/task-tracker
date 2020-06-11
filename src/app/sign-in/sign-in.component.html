@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="text-center">
+        <form class="form-signin form-inline my-2 my-lg-0">
+            <script src='https://apis.google.com/js/platform.js'></script>
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for ="inputEmail" class="sr-only">Email Address</label>
+            <input class="form-control mr-sm-27"  placeholder="Email address" id="inputEmail" required autofocus>
+            <br>
+            <label for= "inputPassword" class="sr-only">Password</label>
+            <input class="form-control mr-xs-6" placeholder="Password" id="inputPassword" required/>
+            <br>
+            <div class="checkbox mb-3">
+                <label for ="rememberMeCheckBox">
+                    <input type="checkbox" value="remember-me" id="rememberMeCheckBox" (click)="rememberMeClick($event)"> Remember me
+                </label>
+            </div>
+            <br>
+            <button (click)="onSubmitClick($event)" class="btn btn-primary" type="submit" id="signInButton" >Sign-in</button>
+        </form>
+    </div>
+</div>
