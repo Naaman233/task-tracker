@@ -1,0 +1,54 @@
+[debug] [2020-06-09T01:44:12.056Z] ----------------------------------------------------------------------
+[debug] [2020-06-09T01:44:12.057Z] Command:       /Users/makafuinaaman/.nvm/versions/node/v11.0.0/bin/node /Users/makafuinaaman/.nvm/versions/node/v11.0.0/bin/firebase functions:shell
+[debug] [2020-06-09T01:44:12.058Z] CLI Version:   6.8.0
+[debug] [2020-06-09T01:44:12.058Z] Platform:      darwin
+[debug] [2020-06-09T01:44:12.058Z] Node Version:  v11.0.0
+[debug] [2020-06-09T01:44:12.058Z] Time:          Mon Jun 08 2020 20:44:12 GMT-0500 (Central Daylight Time)
+[debug] [2020-06-09T01:44:12.058Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-06-09T01:44:12.069Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-09T01:44:12.070Z] > authorizing via signed-in user
+[debug] [2020-06-09T01:44:12.070Z] [iam] checking project task-tracker-d6621 for permissions ["firebase.projects.get"]
+[debug] [2020-06-09T01:44:12.072Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/task-tracker-d6621:testIamPermissions  
+
+[debug] [2020-06-09T01:44:12.275Z] <<< HTTP RESPONSE 200
+[info] i  functions: Preparing to emulate functions.
+[debug] [2020-06-09T01:44:13.016Z] Fetching environment
+[debug] [2020-06-09T01:44:13.017Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/task-tracker-d6621  
+ 
+[debug] [2020-06-09T01:44:13.180Z] <<< HTTP RESPONSE 200
+[debug] [2020-06-09T01:44:13.181Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/115153427938:getServerAppConfig  
+ 
+[debug] [2020-06-09T01:44:13.371Z] <<< HTTP RESPONSE 200
+[debug] [2020-06-09T01:44:13.371Z] Starting @google-cloud/functions-emulator
+[debug] [2020-06-09T01:44:14.930Z] Parsing function triggers
+[info] ✔  functions: addMessage
+[debug] [2020-06-09T18:10:06.677Z] ----------------------------------------------------------------------
+[debug] [2020-06-09T18:10:06.678Z] Command:       /Users/makafuinaaman/.nvm/versions/node/v12.0.0/bin/node /Users/makafuinaaman/.nvm/versions/node/v11.0.0/bin/firebase functions:shell
+[debug] [2020-06-09T18:10:06.679Z] CLI Version:   6.8.0
+[debug] [2020-06-09T18:10:06.679Z] Platform:      darwin
+[debug] [2020-06-09T18:10:06.679Z] Node Version:  v12.0.0
+[debug] [2020-06-09T18:10:06.682Z] Time:          Tue Jun 09 2020 13:10:06 GMT-0500 (Central Daylight Time)
+[debug] [2020-06-09T18:10:06.682Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-06-09T18:10:06.690Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-09T18:10:06.691Z] > authorizing via signed-in user
+[debug] [2020-06-09T18:10:06.691Z] [iam] checking project task-tracker-d6621 for permissions ["firebase.projects.get"]
+[debug] [2020-06-09T18:10:06.692Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-06-09T18:10:06.692Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-06-09T18:10:06.876Z] <<< HTTP RESPONSE 200
+[debug] [2020-06-09T18:10:06.891Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/task-tracker-d6621:testIamPermissions  
+
+[debug] [2020-06-09T18:10:07.075Z] <<< HTTP RESPONSE 200
+[info] i  functions: Preparing to emulate functions.
+[debug] [2020-06-09T18:10:07.783Z] Fetching environment
+[debug] [2020-06-09T18:10:07.786Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/task-tracker-d6621  
+ 
+[debug] [2020-06-09T18:10:07.953Z] <<< HTTP RESPONSE 200
+[debug] [2020-06-09T18:10:07.954Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/115153427938:getServerAppConfig  
+ 
+[debug] [2020-06-09T18:10:08.137Z] <<< HTTP RESPONSE 200
+[debug] [2020-06-09T18:10:08.137Z] Starting @google-cloud/functions-emulator
+[debug] [2020-06-09T18:10:08.223Z] Parsing function triggers
+[info] ✔  functions: addMessage
