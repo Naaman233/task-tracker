@@ -9,8 +9,8 @@ export class AuthenticationService {
       .signInWithEmailAndPassword(email,password)
     }
 
-    signUpUser(email, password) {
+    signUpUser(data:any) {
       return firebase.auth()
-      .createUserWithEmailAndPassword(email, password);
+      .createUserWithEmailAndPassword(data.inputEmail , data.inputPassword);
     }
 }
