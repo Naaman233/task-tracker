@@ -3,6 +3,8 @@ import { AuthenticationService } from '../authentication.service';
 import {Router} from '@angular/router'
 import {FormControl,FormGroup,AbstractControl, Validators} from '@angular/forms'
 import {getValidatorInput} from '../../Validators/validator'
+import {MatDialog} from '@angular/material/dialog'
+
 
 
 
@@ -13,36 +15,34 @@ import {getValidatorInput} from '../../Validators/validator'
 })
 
 export class SignUpComponent implements OnInit {
+  loading = false 
   errorMessage;
   constructor(private authService: AuthenticationService, private router:Router) { }
 
-  firstName = new FormControl('')
-  lastName = new FormControl('')
-  phoneNumber = new FormControl('')
+
   inputEmail = new FormControl('')
   inputPassword = new FormControl('')
-  confirmPassword = new FormControl('', getValidatorInput(this.inputPassword))
+  inputConfirmedPassword = new FormControl('', getValidatorInput(this.inputPassword))
 
   loginForm = new FormGroup({
-    firstName : this.firstName,
-    lastName: this.lastName,
-    phoneNumber: this.phoneNumber,
+
     inputEmail : this.inputEmail,
     inputPassword: this.inputPassword,
-    confirmPassword: this.confirmPassword
+    inputConfirmedPassword: this.inputConfirmedPassword
   })
 
 async onSubmitClick(event){
-  event.preventDefault();
+  event.preventDefault(); 
   console.log(this.loginForm.value)
   if(this.loginForm.invalid){
-    //show errors
     this.errorMessage = 'Invalid form '
     return
   }
 
   this.errorMessage = 'Valid form'
+  
   try{
+    this.loading = true
     await this.authService.signUpUser(this.loginForm.value)
     this.router.navigateByUrl('/sign-in')
   }catch(error){
@@ -50,23 +50,5 @@ async onSubmitClick(event){
     this.errorMessage = error.message
   }
 }
-
-static MatchPassword(AC:AbstractControl){
-  const inputPassword = AC.get('inputPassword').value
-  const confirmPassword = AC.get('confirmPassword').value
-  if(inputPassword != confirmPassword){
-    console.log('Incorrect password values')
-    AC.get('confirmPassword').setErrors({MatchPassword: true})
-  }else{
-    console.log('Password match ')
-    return null
-  }
-
-}
-
-
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

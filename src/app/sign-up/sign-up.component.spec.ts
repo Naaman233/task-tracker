@@ -41,5 +41,13 @@ describe('SignUpComponent', () => {
       expect (getPassword).toBeTruthy()
     })
   })
+   function getConfirmationPassword(){
+     return getElement(fixture, '#inputConfirmPassword')
+   }
+   describe('input confirmed password', ()=>{
+     fit('it should display the confirmed password field to verify user password', ()=>{
+       expect(getConfirmationPassword).toBeTruthy()
+     })
+   })
 
 });

@@ -1,29 +1,39 @@
-<div class="container">
-    <div class="text-center">
-        <form class="form-signin form-inline my-2 my-lg-0" [formGroup]="loginForm">
-            <script src='https://apis.google.com/js/platform.js'></script>
-            <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
-            <div>{{errorMessage}}</div>
-            <label for ="firstName" class="sr-only">First Name</label>
-            <input type= "text" class="form-control mr-sm-27" placeholder="First Name" id="fristName" formControlName="firstName" required/>
-            <br>
-            <label for ="lastName" class="sr-only">Last Name</label>
-            <input type="text" class="form-control mr-sm-27" placeholder="Last Name" id="lastName" formControlName="lastName" required autofocus/>
-            <br>
-            <label for ="phoneNumber" class="sr-only">Phone number</label>
-            <input type="number" class="form-control mr-sm-27" placeholder="Phone number" id="phoneNumber" formControlName="phoneNumber" required autofocus/>
-            <br>
-            <label for ="inputEmail" class="sr-only">Email Address</label>
-            <input class="form-control mr-sm-27"  placeholder="Email address" id="inputEmail" formControlName="inputEmail" required autofocus /> 
-            <br>
-            <label for= "inputPassword" class="sr-only">Password</label>
-            <input class="form-control mr-xs-27"  type="password" placeholder="Password" id="inputPassword" formControlName="inputPassword" required/>
-            <br>
-            <label for= "confirmPassword" class="sr-only">Conform Password</label>
-            <input type="password" class="form-control mr-xs-27" placeholder="Confirm password" id="confirmPassword" formControlName="confirmPassword" required autofocus/>
-            <br>
-            <button (click)="onSubmitClick($event)" class="btn btn-primary" type="submit" id="signUpButton" >Sign-up</button>
-        </form>
-    </div>
-</div>
 
+ <div class="container">
+ <div class="center">
+<mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title>Sign Up</mat-card-title>
+        <div class="warning">{{errorMessage}}</div>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="loginForm">
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width"> 
+                            <input matInput placeholder="Username" id="inputEmail" formControlName="inputEmail" required autofocus>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Password" id="inputPassword" formControlName="inputPassword" type="password" required autofocus>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Confirm password" type="password" id="inputConfirmPassword"  formControlName= "inputConfirmedPassword" required autof>  
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </mat-card-content>
+    <button mat-raised-button color="primary" [class.spinner]="loading" [disabled]="loading" (click)="onSubmitClick($event)">Sign up</button>
+</mat-card>
+</div>
+</div>
