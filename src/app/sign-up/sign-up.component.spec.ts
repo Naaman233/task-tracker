@@ -1,7 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {CustomMaterialModule} from '../../core/material.module'
 import { SignUpComponent } from './sign-up.component';
 import { getElement } from 'src/test-helpers';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {RouterTestingModule} from '@angular/router/testing'
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
+
 
 describe('SignUpComponent', () => {
   let component: SignUpComponent;
@@ -9,7 +22,21 @@ describe('SignUpComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SignUpComponent ]
+      declarations: [ SignUpComponent ],
+      imports:[
+        CommonModule,
+        MatButtonModule,
+        MatCardModule,
+        MatDialogModule,
+        MatInputModule,
+        MatTableModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatIconModule,
+        MatProgressSpinnerModule,
+        RouterTestingModule,
+        BrowserAnimationsModule
+      ]
     })
     .compileComponents();
   }));
@@ -24,30 +51,21 @@ describe('SignUpComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  function getEmailInput(){
-    return getElement(fixture,'#inputEmail')
+  function getInputEmail(){
+    return getElement(fixture, '#inputEmail')
   }
-  describe('InputEmail id',()=>{
-    fit('it should display the input email on the sign up page',()=>{
-      expect(getEmailInput).toBeTruthy()
+  describe('Input field for email',() =>{
+    fit('It should display the input field for the customer',() =>{
+        expect(getInputEmail).toBeTruthy()
     })
   })
-
   function getPassword(){
     return getElement(fixture,'#inputPassword')
   }
-  describe('inputPassword id',()=>{
-    fit('it should display the input input password on the sign up page',()=>{
-      expect (getPassword).toBeTruthy()
+  describe('Input field for password',() => {
+    fit('It should display the input field for the password', ()=>{ 
+      expect(getPassword).toBeTruthy()
     })
   })
-   function getConfirmationPassword(){
-     return getElement(fixture, '#inputConfirmPassword')
-   }
-   describe('input confirmed password', ()=>{
-     fit('it should display the confirmed password field to verify user password', ()=>{
-       expect(getConfirmationPassword).toBeTruthy()
-     })
-   })
 
 });
