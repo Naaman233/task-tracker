@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {RouterTestingModule} from '@angular/router/testing'
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { ReactiveFormsModule } from '@angular/forms'
 
 
 describe('SignUpComponent', () => {
@@ -35,7 +36,8 @@ describe('SignUpComponent', () => {
         MatIconModule,
         MatProgressSpinnerModule,
         RouterTestingModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        ReactiveFormsModule
       ]
     })
     .compileComponents();

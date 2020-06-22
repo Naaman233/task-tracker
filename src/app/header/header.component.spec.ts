@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
 import { getElement } from 'src/test-helpers';
 
-describe('HeaderComponent', () => {
+fdescribe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 
@@ -20,14 +20,14 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  fit('should create', () => {
     expect(component).toBeTruthy();
   });
 
   function getWelcomeLink(){
     return getElement(fixture, '#welcomeLink')
   }
-  describe('welcome link display', () =>{
+  fdescribe('welcome link display', () =>{
       fit('it should show the welcome link to the customer',()=>{
         expect(getWelcomeLink()).toBeTruthy();
       })
@@ -36,7 +36,7 @@ describe('HeaderComponent', () => {
   function getFAQ(){
     return getElement(fixture, '#faqLink')
   }
-describe ('FAQ link display', () =>{
+fdescribe ('FAQ link display', () =>{
   fit('should display a FAQ to the customer for reviews a',() =>{
     expect (getFAQ()).toBeTruthy()
   })
@@ -45,7 +45,7 @@ describe ('FAQ link display', () =>{
 function contactPageLink(){
   return getElement(fixture,'#contactPageLink')
 }
-describe('Conatct page display', () =>{
+fdescribe('Conatct page display', () =>{
   fit('it should display the contact page to the user', ()=>{
     expect(contactPageLink()).toBeTruthy()
   })
@@ -54,7 +54,7 @@ describe('Conatct page display', () =>{
 function optionsLink(){
   return getElement(fixture,'#optionsLink')
 }
-describe('Dropdown menu link', () =>{
+fdescribe('Dropdown menu link', () =>{
     fit('it should display a link to open the dropdown menu',()=>{
        expect(optionsLink()).toBeTruthy()
     })
@@ -63,7 +63,7 @@ describe('Dropdown menu link', () =>{
 function sign_in(){
   return getElement(fixture,'#signInLink')
 }
-describe('Sign in Link in dropdown menu',() => {
+fdescribe('Sign in Link in dropdown menu',() => {
   fit('it should display the link to the sign in page to the user', () =>{
     expect(sign_in()).toBeTruthy()
   })
@@ -72,7 +72,7 @@ describe('Sign in Link in dropdown menu',() => {
 function sign_up(){
   return getElement(fixture,'#signUpLink')
 }
-describe('Sign up page in the dropdown menu', () => {
+fdescribe('Sign up page in the dropdown menu', () => {
   fit('it should display the link to the sign up page to the user', () => {
     expect(sign_up()).toBeTruthy()
   })
@@ -81,7 +81,7 @@ describe('Sign up page in the dropdown menu', () => {
 function rightNavBar(){
   return getElement(fixture,'#displaySearch')
 }
-describe('Navigation bar located at the right side', () =>{
+fdescribe('Navigation bar located at the right side', () =>{
   fit('it should display the navigation bar located at the right',() =>{
     expect(rightNavBar).toBeTruthy()
   })

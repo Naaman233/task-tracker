@@ -1,7 +1,9 @@
 
  <div class="container">
  <div class="center">
-<mat-card class="example-card">
+<mat-card class="example-card" style="right: 30px;
+padding-right: 50em;
+padding-left: -50em;">
     <mat-card-header>
         <mat-card-title>Sign Up</mat-card-title>
         <div class="warning">{{errorMessage}}</div>
@@ -12,14 +14,14 @@
                 <tr>
                     <td>
                         <mat-form-field class="example-full-width"> 
-                            <input matInput placeholder="Username" id="inputEmail" formControlName="inputEmail" required autofocus>
+                            <input matInput placeholder="Email Address" id="inputEmail" formControlName="inputEmail" required autofocus/>
                         </mat-form-field>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <mat-form-field class="example-full-width">
-                            <input matInput placeholder="Password" id="inputPassword" formControlName="inputPassword" type="password" required autofocus>
+                            <input matInput placeholder=" New Password" id="inputPassword" formControlName="inputPassword" type="password" required autofocus>
                         </mat-form-field>
                     </td>
                 </tr>

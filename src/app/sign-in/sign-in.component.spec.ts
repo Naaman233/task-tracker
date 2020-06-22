@@ -1,15 +1,18 @@
 import { async, ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing'
+import { ReactiveFormsModule, FormsModule}  from '@angular/forms'
 import { SignInComponent } from './sign-in.component';
 import { getElement } from 'src/test-helpers';
 
-describe('SignInComponent', () => {
+
+fdescribe('SignInComponent', () => {
   let component: SignInComponent;
   let fixture: ComponentFixture<SignInComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SignInComponent ]
+      declarations: [ SignInComponent ],
+      imports: [RouterTestingModule, ReactiveFormsModule, FormsModule]
     })
     .compileComponents();
   }));
@@ -20,14 +23,14 @@ describe('SignInComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  fit('should create', () => {
     expect(component).toBeTruthy();
   });
 
   function inputEmail(){
     return getElement(fixture,'#inputEmail')
   }
-  describe('Display email input and label', () =>{
+  fdescribe('Display email input and label', () =>{
     fit('it should display the email input form and label to the user', ()=> {
       expect(inputEmail()).toBeTruthy()
     })
@@ -36,7 +39,7 @@ describe('SignInComponent', () => {
   function inputPassword(){
     return getElement(fixture,'#inputPassword')
   }
-  describe('Display password input and label', () => {
+  fdescribe('Display password input and label', () => {
     fit('it should display the password input form and label to the user', ()=> {
       expect(inputPassword()).toBeTruthy()
     })
@@ -45,7 +48,7 @@ describe('SignInComponent', () => {
   function rememberMeCheckBox(){
     return getElement(fixture,'#rememberMeCheckBox')
   }
-  describe('rememberMeClick method', () => {
+  fdescribe('rememberMeClick method', () => {
     fit('it should display the checkbox to allow the user to use the reming me feature', ()=> {
       expect(rememberMeCheckBox()).not.toBeNull()
     })
@@ -62,7 +65,7 @@ describe('SignInComponent', () => {
   function getSubmitButton(){
     return getElement(fixture,'#signInButton')
   }
-    describe('onSubmitClick method', ()=> {
+    fdescribe('onSubmitClick method', ()=> {
 
       fit('shd display button', () => {
         expect(getSubmitButton()).not.toBeNull();
